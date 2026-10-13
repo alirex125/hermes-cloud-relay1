@@ -1,0 +1,14 @@
+name = "hermes-cloud-relay1"
+main = "src/index.js"
+compatibility_date = "2024-04-01"
+
+# KV Namespace to store provider keys, usage stats, and auth config
+kv_namespaces = [
+  { binding = "RELAY_KV", id = "0e3c38e32a454fc98700d2e51d368d10", preview_id = "hermes_relay_kv_preview" }
+]
+
+[vars]
+# Default Admin Password if not initialized in KV (change via Dashboard or KV)
+ADMIN_PASSWORD = "change_me_hermes"
+# Client access token required in Authorization or x-relay-key header for proxy calls
+DEFAULT_RELAY_KEY = "hermes_secret_key"
